@@ -1,0 +1,16 @@
+<p>servers works!</p>
+<p [innerText]="allowToAddServer"></p>
+<!--
+<input type="text" class="form-control" (input)="updateServerName($event)" />
+-->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>
+<button type="button" class="btn btn-primary"
+  (click)="onAddServer()"
+  [disabled]="!allowToAddServer">
+  Add Server
+</button>
+<p>{{ serverCreationStatus }}</p>
+<hr>
+<app-server></app-server>
+<app-server></app-server>
