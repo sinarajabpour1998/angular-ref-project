@@ -10,7 +10,7 @@
   [disabled]="!allowToAddServer">
   Add Server
 </button>
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
 <hr>
 <app-server></app-server>
 <app-server></app-server>
